@@ -65,7 +65,30 @@ Inúmeras abordagens podem ser utilizadas para adquirir informações.
 
 <img width="914" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/68a080e4-c1cc-41db-af05-5a24f9689bc3">
 
+## Métodos para ganhar acesso
+### Passivo-Online
+- Wire Sniffing: Captura os pacotes de dados através da internet
+- Man in the Middle: sequestra uma sessão emt empo real para tentar ganhar acessos
+- Replay Attack: Uma transmissão de dados válida é maliciosamente/fraudulemtamente repetida ou atrasada.
 
+  ### Ativo-Online
+  - Adivinhar as senhas: ataques de força bruta
+  - Trojan/Spyware/Keylogger: softwares espiões que coletam diferentes tipos de dados
+  - Injeção de Hash: Autentificar em um servidor ou serviço usando uma hash NTLM ou LanMan adjacente da senha do usuário. (Tentan entrar no arquivo da senha no servidor e tentar decodificá-lo)
+  - Phishing: tentativa de enganar o usuário com um link malicioso que leva a instalação de umn malware, um ataque de ransomware ou roubo de informações.
+ 
+  ### Ataques Offlines
+
+  - Ataques pre-computados: Estrutura de dados que usa uma função hash para armazenar, ordenar ou acessar dados em um array.
+  - Distributed Network Attack (DNA): sistema para crackear senhas
+  - Rainbow: rainbow table é uma tabela pre computada para reverter funções hash criptográficas geralmente usadas para quebrar senhas.
+ 
+  ### Ataques não eletrônicos
+  - Engenharia social
+  - Ataque dos ombros (Shoulder surfing): espiar por cima dos ombros alguém digitar suas credenciais
+  - Dumpster diving: tentar recuperar informações que foram descartadas no lixo
+ 
+    
 
 
 
