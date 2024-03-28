@@ -178,3 +178,102 @@ Algumas ferramentas que valem a pena das uma pesquisada sobre.
 - [Metasploit](https://docs.rapid7.com/metasploit/metasploit-basics/): é uma ferramenta exploração e validação de vulnerabilidade.
 - [Wireshark](https://www.wireshark.org/#learnWS): analisador de protocolos de redes.
 
+# Resposta a Incidentes
+
+<img width="948" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/36ca2db5-1314-4b7d-a857-c201fef57181">
+
+
+Serão abordados o conceito de resposta a incidentes e suas fases essenciais: 
+
+- preparação
+- detecção e análise
+- contenção, erradicação e recuperação
+- atividades pós-incidente.
+
+  ## Eventos e Incidentes
+
+A distinção entre evento e incidente é crucial: 
+um evento é uma ação comum, como digitar ou receber um email, que pode escalar para um incidente se resultar em múltiplas ocorrências suspeitas em curto período. Os sistemas de detecção de intrusão identificam esses eventos, e a equipe de resposta a incidentes valida esses alertas, caracterizando-os como incidentes quando representam ameaças aos sistemas de TI e impactam negativamente os negócios.
+
+## Por que resposta a incidentes é importante?
+
+A resposta a incidentes é uma ação rápida necessária para detectar incidentes, minimizar perdas e destruição, mitigar as fraquezas exploradas e restaurar os serviços de TI. Ela é importante por oferecer uma abordagem sistemática para lidar com incidentes, minimizar perdas de informação, interrupções de serviço e custos, além de fornecer informações valiosas para prevenir incidentes futuro.
+
+## Equipes de Respostas a Incidentes
+
+Existem diferentes tipos de equipes de resposta a incidentes, que podem ser centralizadas, distribuídas geograficamente ou coordenadoras, sem autoridade direta, mas que fornecem orientação a outras equipes. Essas equipes devem manter uma relação de trabalho com diversas áreas da organização, incluindo gestão, segurança da informação, suporte de TI, departamento jurídico, relações públicas, recursos humanos, planejamento de continuidade dos negócios e gestão de segurança física e instalações.
+
+<img width="1480" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/3bf638b3-6cd8-4cbc-8bbc-236ed88258f2">
+
+## Vetores de Ataque
+
+As organizações devem estar preparadas para responder a vetores de ataque comuns, como mídia removível não autorizada, ataques de força bruta, ameaças via web e email, ataques de personificação e perda ou roubo de equipamento físico. Em caso de incidente, é essencial documentar e ser capaz de responder a perguntas sobre o ataque, como a sua natureza, o porquê, quando e como aconteceu, o impacto e as medidas tomadas para prevenir futuros incidentes.
+
+<img width="433" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/3f8122b5-d95e-4a0b-ab07-745e61fe3217">
+
+## Perguntas de base
+
+<img width="931" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/eb50e7bf-c393-48a9-bfc4-65d3b34e9f76">
+
+## Frameworks
+
+Este conteúdo é baseado no framework de resposta a incidente do National Institute of Standards and Technology (NIST), mas o Sans Institute também fornece uma estrutura não muito diferente do NIST. Conheça a diferença entre eles [aqui](https://cybersecurity.att.com/blogs/security-essentials/incident-response-steps-comparison-guide).
+
+![image](https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/551acc8a-b6aa-4e5e-92f9-a0508d82b2bf)
+
+# Fase de Preparação
+
+## Políticas de REsposta a Incidentes
+- Definição de Papéis: Importante para determinar o escopo de suporte para cada membro da equipe.
+- Ferramentas e Recursos: Para identificação e recuperação de dados comprometidos.
+- Testes de Política: Essenciais devido à evolução contínua das ameaças de cibersegurança.
+- Plano de Ação Detalhado: Para executar a resposta do início ao fim.
+
+## Recursos 
+
+<img width="1091" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/5731f617-033b-4f09-b67a-bfbe32169007">
+
+
+### Comunicações e Instalações para o Manejo de Incidentes:
+
+"Tempo é um dos fatores mais importantes em resposta a incidentes".
+
+- Informações de contato e cadeia de comando.
+- Mecanismos de relatório de incidentes (software, bancos de dados, sistemas de ticket).
+- Smartphones e software de criptografia para equipe.
+- “Sala de guerra” centralizada e armazenamento seguro para ativos recuperados.
+
+### Hardware/Software:
+
+- Estações de trabalho forenses digitais e dispositivos de backup.
+- Laptops de reserva, servidores, equipamentos de rede e equivalentes em máquinas virtuais.
+- Mídia removível, impressoras portáteis, sniffers de pacotes e analisadores de protocolo.
+- Acessórios para coleta de evidências.
+
+### Análise de Incidentes:
+
+- Lista completa de portas e documentação apropriada.
+- Diagrama de rede dos ativos críticos.
+- Baselines de rede e organização para comparação.
+- Hashes criptográficos.
+
+## Prevenção de Incidentes
+
+"Manter o número de incidentes rasoavelmente baixo é muito importante para a proteção dos processos de negócios da organização. Se os controles de segurança são insuficientes, maiores volumes de incidentes podem ocorrer, sobrecarregando o time de resposta a incidentes."
+
+Embora fora do escopo principal da equipe de resposta a incidentes, a prevenção é fundamental para reduzir a carga de trabalho. Aconselhar sobre:
+
+- Avaliações de Risco: Periódicas para sistemas e aplicações.
+- Segurança de Hosts e Redes: Configurações padrão, ACLs estritas e monitoramento contínuo.
+- Perímetro de Rede: Configuração para negar atividades não expressamente permitidas.
+- Prevenção de Malware: Software distribuído por toda a organização.
+- Conscientização e Treinamento dos Usuários: Políticas e procedimentos atualizados.
+
+<img width="706" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/e53d6494-1ae9-4deb-96ae-43217575fbc3">
+
+## Lista de Preparação (SANS Institute):
+
+- Todos os membros estão cientes das políticas de segurança da empresa?
+- Todos os membros da equipe de resposta a incidentes sabem quem contatar?
+- Todos os respondedores de incidentes têm acesso a ferramentas e toolkits para resposta a incidentes?
+- Todos os membros participaram de simulações para praticar e melhorar a proficiência regularmente?
