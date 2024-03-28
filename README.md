@@ -234,7 +234,7 @@ Este conteúdo é baseado no framework de resposta a incidente do National Insti
 <img width="1091" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/5731f617-033b-4f09-b67a-bfbe32169007">
 
 
-### Comunicações e Instalações para o Manejo de Incidentes:
+### Comunicações e Instalações para o Manejo de Incidentes
 
 "Tempo é um dos fatores mais importantes em resposta a incidentes".
 
@@ -243,14 +243,14 @@ Este conteúdo é baseado no framework de resposta a incidente do National Insti
 - Smartphones e software de criptografia para equipe.
 - “Sala de guerra” centralizada e armazenamento seguro para ativos recuperados.
 
-### Hardware/Software:
+### Hardware/Software
 
 - Estações de trabalho forenses digitais e dispositivos de backup.
 - Laptops de reserva, servidores, equipamentos de rede e equivalentes em máquinas virtuais.
 - Mídia removível, impressoras portáteis, sniffers de pacotes e analisadores de protocolo.
 - Acessórios para coleta de evidências.
 
-### Análise de Incidentes:
+### Análise de Incidentes
 
 - Lista completa de portas e documentação apropriada.
 - Diagrama de rede dos ativos críticos.
@@ -271,9 +271,62 @@ Embora fora do escopo principal da equipe de resposta a incidentes, a prevençã
 
 <img width="706" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/e53d6494-1ae9-4deb-96ae-43217575fbc3">
 
-## Lista de Preparação (SANS Institute):
+## Lista de Preparação (SANS Institute)
 
 - Todos os membros estão cientes das políticas de segurança da empresa?
 - Todos os membros da equipe de resposta a incidentes sabem quem contatar?
 - Todos os respondedores de incidentes têm acesso a ferramentas e toolkits para resposta a incidentes?
 - Todos os membros participaram de simulações para praticar e melhorar a proficiência regularmente?
+
+## Precursores e Indicadores
+
+Basicamente precursores são sinais de que um incidente pode ocorrer no futuro e indicadores são sinais de que um incidente já ocorreu ou está acorrendo.
+
+<img width="1479" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/0906c8aa-81e2-4a87-80f8-62999ce8bc97">
+
+## Sistemas de Monitoramento
+
+- IDS (Intrusion Detection Systems): Sistemas de monitoramento que coletam informações.
+- IPS (Intrusion Prevention Systems): Sistemas de controle que filtram pacotes que não cumprem políticas de segurança.
+- DLP (Data Loss Prevention): Ferramentas e processos para evitar perda, mau uso ou acesso não autorizado a dados sensíveis.
+- SIEM (Security Information and Event Management): Solução que combina a gestão de eventos de segurança com a gestão de informações de segurança, fornecendo uma visão holística dos logs para criação de eventos ou alertas.
+
+## Documentação
+
+A documentação é um dos aspectos mais importantes da resposta a incidentes e deve acontecer do início ao fim. Reserve algum tempo para ler [este artigo](https://sansorg.egnyte.com/dl/Hr5l5oGAJZ) para esclarecer como a documentação afeta a resposta a incidentes. 
+
+<img width="1381" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/301f878e-a598-4636-8e85-8fe13cae781e">
+
+## Priorização de Impactos (segundo o National Institute of Security and Technology)
+
+### Impactos Funcionais
+
+- Nenhum: Sem efeito nos serviços da organização.
+- Baixo: Perda mínima de eficiência, mas serviços críticos mantidos para alguns usuários.
+- Médio: Perda de serviço para um subconjunto de usuários.
+- Alto: Incapacidade total de fornecer serviços.
+
+<img width="1289" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/0de6a365-e44a-498d-b221-d5d3203dafae">
+
+
+### Impactos na Informação
+
+- Nenhum: Nenhuma informação comprometida.
+- Violação de Privacidade: Informações pessoais sensíveis acessadas ou exfiltradas.
+- Violação Proprietária: Informações proprietárias não classificadas acessadas ou infiltradas.
+- Perda de Integridade: Informações sensíveis ou privadas alteradas ou deletadas.
+
+<img width="1312" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/17c59638-c61d-4edd-a924-74182801cd2c">
+
+### Capacidade de Recuperação
+
+- Regular: Previsível com recursos existentes.
+- Suplementada: Previsível, mas necessita de assistência externa.
+- Estendida: Incerta quanto ao tempo de recuperação, requer ajuda externa.
+- Irrecuperável: Recuperação não é possível, como dados sensíveis divulgados publicamente.
+
+<img width="1303" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/8aee7ad4-018e-4ceb-90e1-ac8c0daa80ee">
+
+## Comunicação Pós-Detecção
+
+Deve-se notificar todas as partes relevantes ou potencialmente envolvidas, incluindo o diretor de informações (CIO), chefia de segurança da informação, equipes de resposta a incidentes internas e externas, proprietário do sistema, recursos humanos, relações públicas, departamento jurídico e autoridades policiais (se necessário).
