@@ -157,7 +157,7 @@ O relatório técnico pode ser quebrado em seis ou sete categorias diferentes.
 
 - Introdução: irá trazer muitas coisas já mencionadas no backgroud do sumário executivo mas, ao invés de resumir essas informações, o relatório técnico erá detalhar o nome de cada uma das pessoas envolvidas, informações de contatos, os exatos objetivos do teste, o que está dentro e fora do escopo, as abordagens. Tudo é detalhadamente informado.
 
-- Escopo: é onde será informado como foram adquiridas todas as informações durante a fase de coleta, foram coletadas de forma ativa ou passiva, quais informações foram adquiridas da corporação ou do pessoal.
+- Escopo: é onde será informado como foram adquiridas todas as informações durante a fase de descoberta, foram coletadas de forma ativa ou passiva, quais informações foram adquiridas da corporação ou do pessoal.
 
 - Avaliação de Vulnerabilidades: é detalhado exatamente quais ferramentas foram usadas e o que foi encontrado.
 
