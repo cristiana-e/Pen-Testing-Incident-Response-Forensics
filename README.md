@@ -166,3 +166,15 @@ O relatório técnico pode ser quebrado em seis ou sete categorias diferentes.
 - Pós Exploração: É a parte mais importante do relatório técnico. É a parte em que é abordado o caminho tomado para a escalada de privilégios e quais informações críticas foram encontradas a partir disso. Tudo de forma muito bem detalhada.
 
 - Risco/Exposição: faz uma avaliação dos riscos e dos impactos causados/que podem ser causados.
+
+[Como escrever um relatório de Pentest](https://sansorg.egnyte.com/dl/yNfjHOQix8)
+
+## Ferramentas
+
+Algumas ferramentas que valem a pena das uma pesquisada sobre.
+
+- [nmap](https://nmap.org/book/man.html#man-description): é um scanner de rede open source que é utilizado para descobrir hosts e serviços.
+- [JTRipper](https://www.openwall.com/john/): é uma ferramenta open source de auditoria de segurança e recuperação de senha.
+- [Metasploit](https://docs.rapid7.com/metasploit/metasploit-basics/): é uma ferramenta exploração e validação de vulnerabilidade.
+- [Wireshark](https://www.wireshark.org/#learnWS): analisador de protocolos de redes.
+
