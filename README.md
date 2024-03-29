@@ -52,7 +52,7 @@ Inúmeras abordagens podem ser utilizadas para adquirir informações.
 
 - Dorks: Google Dork query, é uma forma de busca avançada do google para adquirir mais informações sobre um item. É possível obter informções que não são legíveis sobre um website.
 
-  <img width="712" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/7d7bd8a2-4da2-4a41-b335-fa398f6a7817">
+  <img width="50%" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/7d7bd8a2-4da2-4a41-b335-fa398f6a7817">
 
 - Formas passivas: É possível monitorar funcionários para tentar obter alguma informação ou credencial. Utilizar de Listeners no tráfego de rede da empresa para pbservar como as comunicações são feitas.
 
@@ -63,7 +63,7 @@ Inúmeras abordagens podem ser utilizadas para adquirir informações.
 ### Ferramentas de scan
 
 
-<img width="914" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/68a080e4-c1cc-41db-af05-5a24f9689bc3">
+<img width="50%" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/68a080e4-c1cc-41db-af05-5a24f9689bc3">
 
 ## Métodos para ganhar acesso
 ### Passivo-Online
@@ -94,7 +94,7 @@ Enquanto a análise de vulnerabilidades confere a possível existência de uma v
 
 ## Fases do ataque
 
-<img width="1079" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/9733d530-8cfc-4a89-b4c0-0e339e5f8d85">
+<img width="50%" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/9733d530-8cfc-4a89-b4c0-0e339e5f8d85">
 
 ### Categorias de vulnerabilidades que podem ser exploradas nos ataques
 
@@ -132,7 +132,7 @@ Esta etapa comunica para o leitor os objetivos específicos do teste de penetra�
 
 O sumário executivo está quebrado em seis categorias:
 
-<img width="615" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/8eab4869-a652-4ff4-a7eb-a75260f6ac5e">
+<img width="30%" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/8eab4869-a652-4ff4-a7eb-a75260f6ac5e">
 
 - Background: fornecerá uma visão geral de todos os envolvidos, os objetivos do teste e outros detalhes que poderão fornecer contexto para o pentest.
 
@@ -143,7 +143,7 @@ O sumário executivo está quebrado em seis categorias:
 
 - Achados Gerais: fornece um resumo dos riscos encontrados durante o teste e um formato estatístico ou gráfico básico. Além disso, a causa do problema deve ser apresentada em um formato de fácil leitura, como na figura abaixo em que o gráfico mostra a causa dos riscos que foram explorados.
 
-<img width="783" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/42003e42-5282-4d1d-8655-f3f25926e264">
+<img width="50%" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/42003e42-5282-4d1d-8655-f3f25926e264">
 
 - Recomendações: são as recomendações para a empresa, deixando-os a par do que é necessário fazer para corrigir as vulnerabilidades exploradas.
 
@@ -153,7 +153,7 @@ O sumário executivo está quebrado em seis categorias:
 
 O relatório técnico pode ser quebrado em seis ou sete categorias diferentes.
 
-<img width="1510" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/d725be0b-d487-47f5-b1ac-2bb095b08b44">
+<img width="70%" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/d725be0b-d487-47f5-b1ac-2bb095b08b44">
 
 - Introdução: irá trazer muitas coisas já mencionadas no backgroud do sumário executivo mas, ao invés de resumir essas informações, o relatório técnico erá detalhar o nome de cada uma das pessoas envolvidas, informações de contatos, os exatos objetivos do teste, o que está dentro e fora do escopo, as abordagens. Tudo é detalhadamente informado.
 
@@ -180,7 +180,7 @@ Algumas ferramentas que valem a pena das uma pesquisada sobre.
 
 # Resposta a Incidentes
 
-<img width="948" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/36ca2db5-1314-4b7d-a857-c201fef57181">
+<img width="70%" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/36ca2db5-1314-4b7d-a857-c201fef57181">
 
 
 Serão abordados o conceito de resposta a incidentes e suas fases essenciais: 
@@ -190,7 +190,7 @@ Serão abordados o conceito de resposta a incidentes e suas fases essenciais:
 - contenção, erradicação e recuperação
 - atividades pós-incidente.
 
-  ## Eventos e Incidentes
+## Eventos e Incidentes
 
 A distinção entre evento e incidente é crucial: 
 um evento é uma ação comum, como digitar ou receber um email, que pode escalar para um incidente se resultar em múltiplas ocorrências suspeitas em curto período. Os sistemas de detecção de intrusão identificam esses eventos, e a equipe de resposta a incidentes valida esses alertas, caracterizando-os como incidentes quando representam ameaças aos sistemas de TI e impactam negativamente os negócios.
@@ -203,17 +203,17 @@ A resposta a incidentes é uma ação rápida necessária para detectar incident
 
 Existem diferentes tipos de equipes de resposta a incidentes, que podem ser centralizadas, distribuídas geograficamente ou coordenadoras, sem autoridade direta, mas que fornecem orientação a outras equipes. Essas equipes devem manter uma relação de trabalho com diversas áreas da organização, incluindo gestão, segurança da informação, suporte de TI, departamento jurídico, relações públicas, recursos humanos, planejamento de continuidade dos negócios e gestão de segurança física e instalações.
 
-<img width="1480" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/3bf638b3-6cd8-4cbc-8bbc-236ed88258f2">
+<img width="60%" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/3bf638b3-6cd8-4cbc-8bbc-236ed88258f2">
 
 ## Vetores de Ataque
 
 As organizações devem estar preparadas para responder a vetores de ataque comuns, como mídia removível não autorizada, ataques de força bruta, ameaças via web e email, ataques de personificação e perda ou roubo de equipamento físico. Em caso de incidente, é essencial documentar e ser capaz de responder a perguntas sobre o ataque, como a sua natureza, o porquê, quando e como aconteceu, o impacto e as medidas tomadas para prevenir futuros incidentes.
 
-<img width="433" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/3f8122b5-d95e-4a0b-ab07-745e61fe3217">
+<img width="30%" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/3f8122b5-d95e-4a0b-ab07-745e61fe3217">
 
 ## Perguntas de base
 
-<img width="931" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/eb50e7bf-c393-48a9-bfc4-65d3b34e9f76">
+<img width="50%" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/eb50e7bf-c393-48a9-bfc4-65d3b34e9f76">
 
 ## Frameworks
 
@@ -231,7 +231,7 @@ Este conteúdo é baseado no framework de resposta a incidente do National Insti
 
 ## Recursos 
 
-<img width="1091" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/5731f617-033b-4f09-b67a-bfbe32169007">
+<img width="50%" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/5731f617-033b-4f09-b67a-bfbe32169007">
 
 
 ### Comunicações e Instalações para o Manejo de Incidentes
@@ -269,7 +269,7 @@ Embora fora do escopo principal da equipe de resposta a incidentes, a prevençã
 - Prevenção de Malware: Software distribuído por toda a organização.
 - Conscientização e Treinamento dos Usuários: Políticas e procedimentos atualizados.
 
-<img width="706" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/e53d6494-1ae9-4deb-96ae-43217575fbc3">
+<img width="40%" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/e53d6494-1ae9-4deb-96ae-43217575fbc3">
 
 ## Lista de Preparação (SANS Institute)
 
@@ -282,7 +282,7 @@ Embora fora do escopo principal da equipe de resposta a incidentes, a prevençã
 
 Basicamente precursores são sinais de que um incidente pode ocorrer no futuro e indicadores são sinais de que um incidente já ocorreu ou está acorrendo.
 
-<img width="1479" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/0906c8aa-81e2-4a87-80f8-62999ce8bc97">
+<img width="70%" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/0906c8aa-81e2-4a87-80f8-62999ce8bc97">
 
 ## Sistemas de Monitoramento
 
@@ -295,7 +295,7 @@ Basicamente precursores são sinais de que um incidente pode ocorrer no futuro e
 
 A documentação é um dos aspectos mais importantes da resposta a incidentes e deve acontecer do início ao fim. Reserve algum tempo para ler [este artigo](https://sansorg.egnyte.com/dl/Hr5l5oGAJZ) para esclarecer como a documentação afeta a resposta a incidentes. 
 
-<img width="1381" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/301f878e-a598-4636-8e85-8fe13cae781e">
+<img width="70%" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/301f878e-a598-4636-8e85-8fe13cae781e">
 
 ## Priorização de Impactos (segundo o National Institute of Security and Technology)
 
@@ -306,7 +306,7 @@ A documentação é um dos aspectos mais importantes da resposta a incidentes e 
 - Médio: Perda de serviço para um subconjunto de usuários.
 - Alto: Incapacidade total de fornecer serviços.
 
-<img width="1289" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/0de6a365-e44a-498d-b221-d5d3203dafae">
+<img width="70%" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/0de6a365-e44a-498d-b221-d5d3203dafae">
 
 
 ### Impactos na Informação
@@ -316,7 +316,7 @@ A documentação é um dos aspectos mais importantes da resposta a incidentes e 
 - Violação Proprietária: Informações proprietárias não classificadas acessadas ou infiltradas.
 - Perda de Integridade: Informações sensíveis ou privadas alteradas ou deletadas.
 
-<img width="1312" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/17c59638-c61d-4edd-a924-74182801cd2c">
+<img width="70%" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/17c59638-c61d-4edd-a924-74182801cd2c">
 
 ### Capacidade de Recuperação
 
@@ -325,8 +325,93 @@ A documentação é um dos aspectos mais importantes da resposta a incidentes e 
 - Estendida: Incerta quanto ao tempo de recuperação, requer ajuda externa.
 - Irrecuperável: Recuperação não é possível, como dados sensíveis divulgados publicamente.
 
-<img width="1303" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/8aee7ad4-018e-4ceb-90e1-ac8c0daa80ee">
+<img width="70%" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/8aee7ad4-018e-4ceb-90e1-ac8c0daa80ee">
 
 ## Comunicação Pós-Detecção
 
 Deve-se notificar todas as partes relevantes ou potencialmente envolvidas, incluindo o diretor de informações (CIO), chefia de segurança da informação, equipes de resposta a incidentes internas e externas, proprietário do sistema, recursos humanos, relações públicas, departamento jurídico e autoridades policiais (se necessário).
+
+# Contenção, Erradicação e Recuperação
+
+## Escolhendo Estratégias de Contenção
+
+"Contenção é importante antes que um incidente sobrecarregue recursos ou aumente os danos. Estratégias de contenções variam baseadas no tipo de incidente. Por exemplo, a estratégia para conter uma infecção de malware nascida de um e-mail é diferente da estratégia de um ataque DDoS."
+
+- Considerações da NIST: Avaliar dano potencial, necessidade de preservar evidências, disponibilidade do serviço afetado, tempo e recursos para implementação, eficácia e duração da solução.
+
+<img width="30%" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/1da02234-40bb-466c-a079-47ef94991bf8">
+
+### Forense na Resposta a Incidentes
+
+Processo forense:
+- Backup de Imagem do Sistema: Criar antes de qualquer alteração para evitar adulteração dos dados.
+- Coleta de Evidências: Utilizar a imagem para investigação.
+- Cadeia de Custódia: Documentar meticulosamente o manuseio da evidência.
+
+## Erradicação e Recuperação
+
+- Eradicação: Eliminação de componentes do incidente, como contas de usuários e vulnerabilidades exploradas. Inclui desativação de serviços e contas e remoção de tudo que foi tocado pela ameaça.
+- Recuperação: Inclui a restauração de sistemas a partir de backups limpos, reconstrução de sistemas, substituição de arquivos comprometidos, instalação de patches, alteração de senhas e ajuste do perímetro de rede.
+- Monitoramento Pós-Reparo: Alto nível de teste e monitoramento para garantir que os sistemas restaurados não estejam mais comprometidos, podendo levar semanas ou meses e feito em fases para monitoramento próximo.
+
+<img width="60%" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/5c781756-0592-4834-844c-5f6b5a9394b8">
+
+## Lista de Verificação do SANS Institute para Contenção, Erradicação e Recuperação
+
+### Contenção
+
+- É possível isolar o problema?
+- Todos os sistemas afetados estão isolados dos não afetados?
+- Foram criadas cópias forenses dos sistemas afetados para análise?
+
+
+### Erradicação
+
+- É viável reimagem do sistema?
+- Foram aplicados patches e contra-medidas?
+- Todo o malware e outros artefatos deixados foram removidos?
+
+
+### Recuperação
+
+- Quais ferramentas serão usadas para testar, monitorar e garantir que os sistemas restaurados não sejam comprometidos novamente pelos mesmos métodos do incidente original?
+
+# Automação
+
+Um dos principais desafios enfrentados por todos os campos da segurança cibernética é o aumento esmagador de ameaças sem um aumento proporcional de profissionais de segurança cibernética para lidar com elas. Todos os sinais apontam para a automação como um elemento central para ajudar a mitigar as tarefas repetitivas e aumentar o tempo de resposta a eventos e ameaças. Leia [este artigo](https://www.sans.org/white-papers/38862/) sobre automação na resposta a incidentes.
+
+## Atividades Pós-Incidente
+
+"Realizar uma reunião de 'missão aprendida' com todas as partes envolvidas após um grande incidente, e opcionalmente periódicamente após menores incidentes de acordo com o que os recursos permitirem, podem ser de extrema ajuda em melhorar as medidas de seguranças e o processo de tratamento de incidentes." - NIST.SP.800-61
+
+### Missão Aprendida
+
+- O que exatamente aconteceu e em quais momentos?
+- Como o desempenho do pessoal e da gestão foi na resolução do incidente?
+- Os procedimentos documentados foram seguidos e são adequados?
+- Que informações seriam úteis ter mais cedo?
+- Quais ações tomadas inibiram a recuperação?
+- Como o compartilhamento de informações com outras organizações poderia melhorar?
+- Que ações corretivas podem prevenir incidentes semelhantes no futuro?
+- Quais precursores ou indicadores poderiam ser monitorados para detectar eventos similares?
+
+*Incluir descobertas na documentação existente para melhor preparação em incidentes futuros.
+
+### Outras Atividades Pós-Incidente
+
+- Utilização dos Dados Coletados: Analisar os tempos de resposta, dados impactados, duração da resolução e recuperação para melhorar as métricas da organização.
+- Retenção de Evidências: Armazenamento e arquivamento de informações coletadas para uso em processos legais, garantindo a preservação da cadeia de custódia.
+- Revisão de Documentação: Reavaliar toda a documentação relacionada à resposta a incidentes para identificar e corrigir lacunas.
+
+<img width="740" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/053e96a9-e1a9-4af4-af13-b1e8728cc7ad">
+
+## Estudo de Caso
+
+ [Este caso](https://www.sans.org/reading-room/whitepapers/incident/practical-incident-response-network-based-attack-37920) de estudo de uma resposta a incidente de uma amecaça baseada em rede. 
+
+ 
+
+
+
+  
+ 
