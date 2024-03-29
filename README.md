@@ -409,9 +409,121 @@ Um dos principais desafios enfrentados por todos os campos da segurança cibern�
 
  [Este caso](https://www.sans.org/reading-room/whitepapers/incident/practical-incident-response-network-based-attack-37920) de estudo de uma resposta a incidente de uma amecaça baseada em rede. 
 
- 
+ # Acompanhando um Profissional
+
+Neste estudo de caso de resposta a incidentes, Tommy Patton, um profissional com 5 anos de experiência em cibersegurança, mostra seu processo de resposta a incidentes utilizando a ferramenta IBM QRadar. 
+
+## Etapa 1: Preparação
+
+- Identificação de ameaças comuns como ataques de software, extração de dados, sabotagem da informação e roubo de equipamentos.
+- Reconhecimento de vetores de ataque possíveis.
+- Preparação envolve coletar informações essenciais, como:
+    -    Listagem de Ativos: Priorização por importância e risco.
+    -    Lista de Stakeholders: Contatos cruciais para notificar durante um incidente.
+    -    Definição de Gatilhos de Investigação: Estabelecimento de eventos que iniciam a resposta.
+
+## Etapa 2: Detecção e Análise
+
+- Alertas são recebidos e o processo de detecção e análise é iniciado.
+- Análise Detalhada: Investigação da natureza do alerta, determinando o ponto de entrada, a amplitude e a validade.
+
+Questões a Responder:
+    -  Ação autorizada por um administrador?
+    -  Ataque usando conta de administrador de dispositivo remoto?
+    -  Quantos dispositivos estão afetados?
+
+Documentação e Escalada: Notificação das partes envolvidas e registro detalhado do incidente.
+
+### Ferramentas Utilizadas:
+
+- IBM QRadar (SIEM): Coleta, processa e armazena dados de eventos de sistemas, executando análise baseada em regras.
+- McAfee ePolicy Orchestrator (HBSS): Previne, detecta e remove malware em sistemas Windows.
+- Next Generation Firewalls: Oferecem inspeção de estado, correspondência de assinaturas e inspeção de carga de pacotes para filtragem.
+
+## Etapa 3: Contenção, Erradicação e Recuperação
+
+Contenção: Impedir mais danos isolando o sistema afetado.
+Erradicação: Remover a ameaça do sistema.
+Recuperação: Restaurar os sistemas afetados para retomar as operações normais de negócios.
+
+## Etapa 4: Atividades Pós-Incidente
+
+Análise de Ação Após Incidente: Revisão crítica das ações tomadas para aprender com as deficiências.
+Relatórios Pós-Ação: Documentação para tornar a resposta a incidentes mais eficiente.
+
+## Dentro do Qradar
+
+### Seleção de Estratégia de Contenção com IBM QRadar
+
+Referências de Incidentes: Criadas quando uma regra é ativada e a ação para criar uma ofensa é definida.
+Interface do QRadar: Listagem das ofensas detectadas pelo motor de regras.
+Priorização: Determinada pela magnitude.
+
+## Examinando uma Ofensa de Magnitude 5
+
+- Página de Resumo: Fornece detalhes como IPs de origem, IPs de destino, fontes de logs envolvidas e categorias dos eventos.
+- Análises Importantes: Anotações principais e detecção de URL maliciosa baseada na comparação de consultas DNS com um conjunto de referência que contém URLs maliciosas.
+
+## Processo de Resposta a Incidentes Iniciado
+
+- Confirmação de Atividade Maliciosa: A consulta DNS maliciosa foi resolvida para um IP que não é da rede privada, indicando que o endereço DNS foi resolvido com sucesso.
+- Documentação Detalhada do Incidente: Preenchimento de um formulário de resposta a incidentes, incluindo tipo de incidente, fonte de detecção, ambiente afetado, IPs envolvidos e ações tomadas.
+
+## Resposta e Recuperação
+
+- Desconexão da Rede: Submissão de um ticket para desativar o ponto de conexão da estação de trabalho.
+- Varredura com Antivírus: Após a desativação, iniciar a varredura para detectar outros possíveis malwares.
+- Recriação: Mesmo com varredura limpa, a máquina deve ser recriada por ter alcançado a rede de controle de botnet.
+
+## Fechamento do Incidente
+
+- Registro de Ações: Após as etapas de resposta, toda a informação é processada e arquivada para referência futura.
+- Encerramento no QRadar: A ofensa é fechada no sistema e deixa de aparecer nas ofensas ativas.
+
+## Avaliação de Outras Ofensas
+
+- Possível Ataque DDoS: Verificação de eventos e, no caso de ser atividade típica do usuário, identificar como falso positivo.
+- Ajustes na Regra do QRadar: Se necessário, alterar a regra para reduzir os falsos positivos futuros e documentar as mudanças.
+
+## Análise de Ofensa com Alta Severidade
+
+Primeira Observação: Nome do evento indica arquivo infectado sem opção de limpeza e acesso negado pelo sistema operacional.
+Na Página de Resumo: Há detalhes sobre a infecção do arquivo e a inexistência de um limpador.
+Análise dos Eventos: Detecta-se que a infecção está em um arquivo na lixeira do sistema.
+
+## Processo de Resposta a Incidentes
+
+Documentação do Incidente: Registro do tempo e anotação detalhada da ocorrência.
+Contato com a Equipe de Rede: Solicitação para desabilitar a conexão da estação de trabalho afetada.
+Comunicação com Partes Interessadas: Conforme listado na etapa de preparação.
+Execução de Varredura Antivírus (AV): Aguardando resultados para ação subsequente.
+Adição de novas anotações e detalhes durante o processo.
+
+## Resultados da Varredura AV
+
+Persistência do Arquivo Infectado: O arquivo ainda está presente, mesmo após a varredura, indicando a necessidade de reimagem do sistema.
+Avaliação e Recomendação: Encaminhamento do caso para reimagem após consulta ao gestor de acessos (IAM).
+
+## Elaboração do Relatório de Ação Pós-Incidente
+
+Registro de Eficiências e Erros: Documentação contínua de falhas e sucessos para melhorar a resposta a incidentes.
+
+## Melhoria da Eficiência
+
+Revisão da Eficiência: Identificação de oportunidades de aprimoramento, como verificar a eficácia das ações antes de investigações mais profundas.
+Comunicação com Acionistas: Reconhecimento da necessidade de notificação precoce durante o processo.
 
 
+## Revisão do Processo de Resposta a Incidentes
 
+Preparação: Identificação de ativos, eventos e contatos.
+Detecção e Análise: Pesquisa de eventos e determinação do escopo do incidente.
+Contenção, Erradicação e Recuperação: Desconexão de sistemas afetados, busca por ameaças adicionais e restauração do estado funcional.
+Atividade Pós-Incidente: Relatório de ação pós-incidente para otimização contínua da resposta a incidentes.
+
+Ambos os incidentes analisados necessitaram que os sistemas fossem recriados, conforme a avaliação.
+
+# Ferramentas na REsposta a Incidente
+
+Leia [este artigo](https://www.cynet.com/blog/the-7-best-free-and-open-source-incident-response-tools/) para ver quais outras ferramentas estão sendo usadas para resposta a incidentes.
   
- 
