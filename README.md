@@ -805,4 +805,58 @@ Certos tipos deaplicações tendem a ser mais focadas em uma análise forense, c
 
 <img width="40%" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/f24bf1c7-6357-41a4-8a65-8ca48f4cc72a">
 
+## Dados de Rede 
+
+"Analistas podem usar dados do tráfego de rede para reconstruir e analisar ataques baseados em rede e usos inapropriados de redes, assim como solucionar vários tipos de problemas operacionais. O termo tráfego de redes refere-se a comunicações de rede de computadores que ocorrem em redes cabeadas ou sem fio entre hosts." - NIST 800-86
+
+### TCP/IP
+
+TCP/IP é essencial para a comunicação em redes de computadores, tanto cabeadas quanto sem fio, entre hospedeiros.
+
+<img width="95%" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/03e44a26-ed81-40d1-9c7d-79a0a89f1656">
+
+#### Camadas do TCP/IP
+
+- Camada de Aplicação: Permite a transferência de dados entre um servidor de aplicação e um cliente. Protocolos comuns incluem HTTP, DNS, FTP e SMTP.
+- Camada de Transporte: Responsável pelo empacotamento de dados para transmissão entre hospedeiros, utilizando protocolos como TCP (Protocolo de Controle de Transmissão) e UDP (Protocolo de Datagrama de Usuário).
+- Camada IP (Camada de Rede): Encaminha pacotes através de redes. O ICMP (Protocolo de Mensagens de Controle da Internet) é um exemplo de protocolo nesta camada, conhecido por não garantir a entrega de suas mensagens de status de erro.
+- Camada de Hardware (Camada de Enlace de Dados): Gerencia as comunicações nos componentes físicos da rede, sendo o Ethernet um dos protocolos mais conhecidos.
+
+### Fontes de Dados de Rede
+
+Estas fontes coletivamente capturam dados importantes de todas as camadas TCP/IP.
+
+<img width="75%" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/7213d1dc-cba9-4564-a181-e32183cb6af9">
+
+As principais fontes de dados de rede incluem:
+
+- Firewalls e Roteadores: Dispositivos baseados em rede que examinam o tráfego e permitem ou negam com base em um conjunto de regras, logando tentativas de conexão negadas.
+- Sniffers de Pacote: Projetados para monitorar o tráfego e capturar pacotes em redes cabeadas ou sem fio.
+- Sistemas de Detecção de Intrusão (IDS): Analisam o tráfego da rede para identificar atividades suspeitas.
+- Servidores de Acesso Remoto: Facilitam conexões entre redes, podendo envolver sistemas externos conectando-se a sistemas internos.
+- Software de Gerenciamento de Eventos de Segurança (SEM): Importa informações de eventos de segurança de várias fontes, correlacionando-os para identificar eventos relacionados.
+- Ferramentas de Análise Forense de Rede (NFAT): Fornecem funcionalidades semelhantes a sniffers de pacote, analisadores de protocolo e software SEM, focadas na coleta, exame e análise do tráfego de rede.
+
+### Valor das Fontes de Dados
+
+Cada fonte de dados tem seu valor e limitações. Por exemplo, os IDS podem ser um ponto de partida para examinar atividades suspeitas, enquanto os sniffers de pacote coletam uma grande quantidade de informações sobre a atividade da rede, mas também podem capturar grandes volumes de dados irrelevantes. As ferramentas NFAT são especialmente valiosas para análise de tráfego de rede, monitorando eventos de interesse.
+
+ - IDS Software: Identificam tráfego malicioso em todas as camadas TCP/IP, além de proverem logs com vários campos de dados. São úteis na validação de eventos e pode correlacionar com outras fontes de dados.
+ - SEM Software: automaticamente correlaciona eventos em meio a uma quantidade gigantesca de fontes de dados e extrai informações relevantes para o usuário.
+- NFAT Software: foi projetado especificamente para auxiliar na análise do tráfego de rede, por isso sempre será valioso se tiver monitorado um evento de interesse.
+- Firewalls, Routers, Proxy Servers e RAS: essas fontes de dados geralmente têm poucos dados, a análise de dados durante um longo período de tempo pode indicar tendências gerais, como um aumento nas tentativas de conexão em bloco, etc., no entanto, como essas fontes normalmente são registradas e há pouca informação sobre cada evento, os dados podem fornecem alguns insights sobre a natureza do evento em si.
+- Servidores DHCP: normalmente pode ser configurado para registrar cada atribuição de endereço IP ao endereço MAC associado junto à data e hora, o que pode ser útil na identificação de qual host executou uma atividade usando um endereço IP específico.
+- Packet Sniffers: de todas as fontes de tráfego de dados da rede, Packet Sniffers coletam a maior parte das informações sobre uma atividade na rede. A desvantagem são os enormes valores de dados irrelevantes, bem como milhões ou bilhões de pacotes que normalmente não fornecem nenhuma indicação sobre qual pacote pode realmente conter a atividade maliciosa que estamos procurando.
+- Monitoramento de Rede: é útil na identificação de desvios significativos dos fluxos de tráfego normais, como aqueles causados por ataques distribuídos de negação de serviço (DDoS).
+- Registros ISP: rastreiam e atacam de volta à sua origem, especialmente quando o ataque usa endereços IP falsificados.
+
+### Identificação do Atacante
+
+Embora identificar o atacante não seja a preocupação imediata durante a maioria dos ataques – com a prioridade sendo interromper o ataque e recuperar os dados do sistema – existem estratégias que podem auxiliar nesse processo, como contatar o proprietário do endereço IP e buscar assistência do provedor de serviços de Internet, o que pode exigir uma ordem judicial.
+
+
+<img width="60%" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/0b3d127c-4a2a-473a-9a20-eb58b64f7693">
+
+
+"Ao analisar ataques, identificar o atacante não é uma preocupação imediata: garantir que o ataque foi parado e recuperar o sistema e os dados são o principal interesse"- NIST 800-86
 
