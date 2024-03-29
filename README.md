@@ -526,4 +526,126 @@ Ambos os incidentes analisados necessitaram que os sistemas fossem recriados, co
 # Ferramentas na REsposta a Incidente
 
 Leia [este artigo](https://www.cynet.com/blog/the-7-best-free-and-open-source-incident-response-tools/) para ver quais outras ferramentas estão sendo usadas para resposta a incidentes.
+
+# Forensics
+
+"Forense digital, também conhecida como forense de computadores e redes, possui muitas definições. Em geral, é considerada a aplicação da ciência para a identificação, coleta, exame e análise de dados enquanto é presenvada a integridade da informação e mantida uma rigorosa cadeia de custódia.
+
+## Tipos de Dados
+
+O primeiro passo é identificar a fonte dos dados, para então adiquiri-los. A fonte mais óbvia e comum são os computadores, servidores, dispositivos de armazenamento de rede e laptops.
+
+- CDs/DVDs
+- Drives Internos/Externos
+- Dados Voláteis:  Dados que existem em um momento específico e podem mudar rapidamente, enão é preciso adquiri-los naquele exato momento antes que sejam perdidos.
+- Atividade de Rede: Acessíveis via provedores de serviços de Internet com ordem judicial
+- Uso de Aplicativos: Aplicações armazenam sessões anteriores ou projetos salvos, sendo ricas em dados
+- Dispositivos Digitais Portáteis: Celulares, gravadores de áudio, câmeras de segurança, câmeras digitais, dispositivos que estão ao nosso redor.
+
+## Utilização da Forense Digital
+
+Principalmente em investigações criminais e resposta a incidentes, mas também em:
+- Solução de Problemas Operacionais
+-  Monitoramento de logs
+- Recuperação de Dados: Utiliza de ferramentas para recuperar dados de sistemas perdidos.
+- Aquisição de Dados: Acesso a dados em workstations desativadas ou reatribuídas.
+- Conformidade Regulatória: Proteção de informações sensíveis e manutenção de registros.
+
+## Objetivos da Firense Digital
+
+<img width="60%" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/ff643f7e-b4dd-4460-aede-775d931ce26d">
+
+
+- Documentação: Registrar o processo de coleta de evidências e as próprias evidências.
+- Identificar Motivos e Tempo: Determinar se um evento foi um crime ou acidente e estabelecer o contexto.
+- Proteção de Evidências: Garantir que nenhum passo no procedimento seja negligenciado, prevenindo acusações de adulteração de evidências.
+- Aquisição e Duplicação Segura: Assegurar que os dados não sejam alterados durante a cópia.
+- Relatórios Compreensíveis: Escrever relatórios claros e atempados para que não-técnicos possam entender.
+- Preservação da Cadeia de Custódia: Documentar cada etapa do manuseio das evidências.
+
+## Processo Forense segundo o NIST
+
+- Coleta: Identificar, rotular, registrar e adquirir dados de todas as fontes possíveis.
+- Exame: Processar grandes quantidades de dados coletados para identificar dados de interesse particular.
+- Análise: Utilizar métodos e técnicas legalmente justificáveis para analisar os resultados do exame.
+- Relatório: Documentar os resultados da análise.
+
+## Coleta de Dados e Exames
+
+Abrangemos uma variedade de dados, desde CDs e DVDs, drives internos e externos, dados voláteis, atividade de rede, uso de aplicativos, até dispositivos digitais portáteis. A coleta de dados vai além desses exemplos, encarando desafios únicos, como a aquisição de dados de propriedades externas, como computadores pessoais de funcionários, backups de escritórios domésticos ou logs de sistemas. As vezes é preciso pensar fora da caixa, em fontes de dados alternativos de forma que determinados dados não podem mais ser acessados, então backups, por exemplo, podem ser uma segunda opção.
+
+<img width="482" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/dd5d48aa-2516-4cc1-a2e7-e9ecc7014e92">
+
+
+## Estapas da Coleta de Dados
+
+<img width="392" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/f73de7b4-3147-4ca0-b690-7955579af56f">
+
+
+A aquisição de dados é categorizada em três etapas principais:
+
+- Desenvolvimento de um Plano: Priorização de dados baseada em seu valor e volatilidade.
+- Execução da Coleta: Uso de ferramentas forenses para coletar dados voláteis e duplicar fontes de dados não voláteis, garantindo a segurança da fonte original.
+- Verificação da Integridade: Uso de hash para comparar o original com a cópia, por exemplo, assegurando a integridade dos dados.
+
+## Cadeia de Custódia
+
+Essencial para evitar acusações de manipulação ou adulteração de evidências. É um processo que detalha Quemn, Oque, Quando e Onde no manejo das evidências, assegurando sua integridade.
+
+- Documentação de quem teve a custódia física da evidência e em qual horário.
+- Armazenamento seguro da evidência quando não está em uso.
+- Cópia da evidência para trabalhar apenas nas duplicatas.
+- Verificação da integridade da evidência original e sua cópia.
+
+## Exames
+
+O exame enfrenta obstáculos como contornar controles de sistemas operacionais e aplicativos, que podem incluir compressão de dados, criptografia e listas de controle de acesso avançadas. A vasta quantidade de dados e a relevância desses dados para o caso também são desafios significativos. Ferramentas e técnicas específicas ajudam a filtrar e excluir dados irrelevantes para agilizar o processo de exame.
+
+<img width="30%" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/8d132ae5-8341-4b36-aea6-4d3f59905330">
+
+## Manejo da Evidência Digital
+
+Para expandir ainda mais a importância de preservar as evidências digitais que foram coletadas, [a página do NIST](https://www.nist.gov/digital-evidence) sobre evidências digitais e [leia o artigo](https://www.ojp.gov/pdffiles1/nij/grants/248770.pdf) sobre perícia no tribunal.
+
+## Análise e Relatório
+
+"A análise inclui identificar pessoas, lugares, itens e eventos, e determinar como esses elemestos estão relacionados  para que uma conclusão seja alcançada."- NIST 600-86
+
+### Juntando as Peças
+
+A coordenação entre múltiplas fontes de dados é essencial para formar uma imagem completa do incidente. Um exemplo dado pelo Instituto Nacional de Padrões e Tecnologia (NIST) ilustra como registros de sistemas de detecção de intrusão, logs de auditoria de host e registros de sistemas de detecção de intrusão em host podem ser interligados para rastrear um evento a uma conta de usuário específica e suas ações.
+
+### Casos resolvidas com o uso da Forense Digital
+
+<img width="55%" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/09f79b8a-547a-468f-8bd2-6aeb2b50ae85">
+
+## Elaboração do Relatório Forense
+
+Um relatório forense detalha a base das conclusões do examinador. Deve ser detalhado, incluindo cada teste conduzido, métodos e ferramentas utilizadas, e os resultados. Algumas regras gerais são:
+
+- Se não está no seu relatório, você não pode testemunhar sobre isso.
+- Seu relatório precisa detalhar a base para a sua conclusão.
+- Detalhe todo teste que for conduzido, inclusive os métodos, as ferramentas usadas e os resultados.
+
+### Composição de um Relatório Forense
+
+- Visão Geral do Caso: Descrição de como o investigador foi acionado para o caso, seja por solicitação interna de uma organização, ordem judicial, ou outro meio.
+
+- Preparação e Aquisição Forense: Detalhes da interação com a evidência digital e etapas para preservar a evidência adquirida. Descreve as estratégias adotadas para garantir a integridade das evidências.
+
+- Análise e Resultados: Métodos de análise utilizados, ferramentas empregadas, resultados obtidos e referências a fontes reputadas quando necessário. Trás a descrição das técnicas aplicadas aos dados coletados, justificando a escolha dos métodos com base na natureza das evidências e dos objetivos da investigação. É ideal fazer a enumeração das ferramentas de software empregadas na análise, com detalhes sobre suas configurações, funções específicas utilizadas, e justificativa para sua escolha. Nesta etapa faz-se a apresentação detalhada dos achados, correlacionando-os com os objetivos da investigação, incluindo qualquer dificuldade enfrentada durante a análise e como foi resolvida. É importante trazer citações de fontes confiáveis que fundamentam as técnicas utilizadas, ajudando a validar os métodos de análise.
   
+- Conclusão: É um resumo conciso das evidências analisadas, dos resultados principais, e da sua relevância para o caso. É importante lembrar que esta etapa não deve ser tão longa a ponto de ofuscar a parte de análise do seu relatório.
+
+### Práticas Recomendadas para a Análise em Relatórios Forenses (Segundo o Instituto SANS):
+
+- Tirar muitas capturas de tela.
+- Marcar evidências via aplicativo forense de escolha.
+- Utilizar opções de log e relatório integradas da ferramenta forense.
+- Destacar e exportar itens de dados em formatos acessíveis como CSV ou arquivos de texto.
+- Preferir gravações de áudio digital a notas manuscritas para evitar confusões.
+
+## Forense Digital em dispositivos móveis
+
+Artigos para leitura [aqui](https://csrc.nist.gov/projects/mobile-security-and-forensics) e [aqui](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-101r1.pdf).
+
