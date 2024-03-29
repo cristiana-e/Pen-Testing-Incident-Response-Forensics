@@ -649,3 +649,160 @@ Um relatório forense detalha a base das conclusões do examinador. Deve ser det
 
 Artigos para leitura [aqui](https://csrc.nist.gov/projects/mobile-security-and-forensics) e [aqui](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-101r1.pdf).
 
+## Arquivos de Dados
+
+### Sistemas de Arquivos
+
+Sistemas de arquivos definem o modo como arquivos serão nomeados, armazenados, organizados e acessados em volumes lógicos. Os dados podem variar de documentos, imagens, vídeos a aplicativos. A capacidade de coletar, examinar e analisar esses arquivos depende do conhecimento sobre os diferentes sistemas de arquivos, incluindo os usados por Windows, Unix e macOS. 
+
+<img width="70%" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/9a74b59e-baa3-4a8a-8da5-8a934f3a2929">
+
+### O que não está ali
+
+A coleta de dados envolve desafios significativos, especialmente quando os dados desejados estão em dispositivos de propriedade externa ou já foram excluídos. 
+
+<img width="50%" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/a58972d2-5479-4938-974b-441152175a2d">
+
+
+- Arquivos Excluídos: A exclusão de arquivos geralmente remove apenas o indicador no diretório, deixando os dados no disco até serem sobreescritos.
+- Espaço Residual (Slack Space): Espaço não utilizado dentro de blocos de armazenamento que pode conter dados residuais.
+- Espaço Livre: Mesmo após a exclusão, dados podem residir no espaço livre do disco, potencialmente recuperáveis.
+
+## MAC data
+
+É importante ter conhecimento de todo arquivo relevante possível. Gravar os dados de Modificação, Acesso e Criação (MAC) dos arquivos permite à analise estabelecer uma timeline do incidente.
+
+## Preservação da Integridade dos Dados
+
+A integridade dos dados é preservada através de:
+
+- Backups Lógicos: Copiam diretórios e arquivos, mas não capturam dados excluídos ou espaço residual.
+- Imagens Bit-a-Bit: Cópias exatas do meio original, incluindo todos os dados, espaço livre e residual.
+
+<img width="90%" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/5cc7aad2-ffd1-4cc5-a587-ab4907c386ec">
+
+## Técnicas e Ferramentas Forenses:
+As ferramentas forenses modernas facilitam a análise de arquivos e aplicações, leitura de imagens de disco e extração de dados de arquivos, usando técnicas como:
+
+- Visualizadores de Arquivos: Permitem a revisão de múltiplos tipos de arquivo sem as aplicações nativas.
+- Descompressão de Arquivos: Fundamental para incluir arquivos comprimidos nas buscas. Importante estar atento neste caso pois atacantes podem deixar "bombas" zipadas, mas geralmente AV e SIEMs cpodem ajudar a mitigar isso.
+- Interface Gráfica para Estruturas de Diretório: Auxilia na rápida compreensão do conteúdo de uma mídia.
+- Identificação de Arquivos Conhecidos: Utiliza conjuntos de hash para excluir arquivos do sistema operacional e aplicativos da análise.
+- Pesquisas por Strings e Padrões: Essenciais para filtrar grandes volumes de dados em busca de informações relevantes.
+- Acesso a Metadados de Arquivos: Fornece contexto adicional e informações sobre o autor do arquivo.
+
+#### [Artigo](https://www.ufsexplorer.com/articles/chances-for-data-recovery.php) sobre recuperação de arquivos.
+
+## Dados do sistema operacional
+
+"Dados de OS existem em estados voláteis e não voláteis. Dados não voláteis se referem aos dados que persistem mesmo depois que o computador é desligado, assim como os arquivos de sistemas armazenados no disco de armazenamento. Dados voláteis se referem aos dados em um sistema vivo que são perdidos após o computador ser desligados, assim como as conecções de rede de e para o sistema." NIST 800-86
+
+
+<img width="60%" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/d00a0593-752e-4415-8136-234b8193c657">
+
+
+## Colleta e Priorização de Dados Voláteis
+
+São os primeiros dados que devem ser coletados, pois não é possível prever até quando será possível obtê-los. Abaixo está a lista de dados a priorizar na coleta:
+
+<img width="30%" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/76bf17a7-ad6c-4ade-8853-031bdfa96aeb">
+
+
+## Coleta de Dados não Voláteis
+
+Para dados não voláteis, considerações incluem o método de desligamento do dispositivo. A integridade dos dados pode ser comprometida com desligamentos abruptos, especialmente em discos rígidos mecânicos. Há duas abordagens principais:
+
+- Desligamento Natural: Usando o botão de energia ou um comando no sistema operacional.
+- Remoção da Bateria: Em dispositivos portáteis, para evitar corrupção de dados em discos rígidos durante operações de leitura/escrita.
+
+<img width="30%" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/4ecbdda8-5672-4607-8077-43b3341b58b9">
+
+#### Exemplos de logs
+<img width="60%" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/7f40765f-fa8e-4db2-aa38-a3575a4ef11d">
+
+### Sistemas Operacionais em Detalhes
+
+- Windows: Utiliza sistemas de arquivos como FAT, exFAT, NTFS e ReFS. Locais importantes para análise incluem a Lixeira, o Registro e o histórico do navegador.
+  
+
+<img width="60%" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/8ddbd26d-2b5b-4f3a-9ef5-28a89c4b4ab1">
+
+
+- MacOS: Sistema Unix-based com uma interface de usuário semelhante à da Apple. Uma técnica recomendada para criar duplicatas forenses é usar o Modo de Disco de Destino, conectando dois Macs com um cabo FireWire.
+
+
+<img width="60%" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/ce20b8e8-7427-4623-98b7-53ebfad3b528">
+
+  
+- Linux: Um sistema operacional open-source Unix-like que suporta vários sistemas de arquivos da família ext. Áreas críticas para análise incluem o diretório /etc, /var/log para logs de aplicações e segurança, e o diretório /home para dados do usuário.
+  
+
+<img width="60%" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/291e7e88-6956-460a-883d-f98c0743586c">
+
+## Dados de Aplicações
+
+"OS, arquivos e redes, todos precisam dar suporte à aplicações: OS para executar as aplicações, redes para enviarem dados da aplicaçao entre sistemas, arquivos para armazenarem dados das aplicações, configurações e logs. Da perspectiva forense, aplicações unem arquivos, OS e redes."- NIST 800-86
+
+### Componentes de uma Aplicação
+
+- Configurações de Aplicação: Incluem configurações temporárias ou permanentes, específicas do usuário ou aplicáveis a todos os usuários, armazenadas como arquivos de configuração, opções de tempo de execução ou diretamente no código-fonte.
+
+
+<img width="30%%" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/5178a0e1-0a80-4909-b293-82ad5242186f">
+
+
+- Autenticação de Aplicativos: Varia entre autenticação externa, autenticação proprietária (específica de aplicativos usando nomes de usuário e senhas), autenticação pass-through (utilizando autenticação do sistema operacional) e ambientes de usuário hospedado, comuns em ambientes empresariais.
+
+
+<img width="30%" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/93273f73-6e5a-4d4b-ab08-eb5bbcef3878">
+
+
+- Logs de Aplicativos: Registrados em formatos específicos ou proprietários, incluem logs de eventos, auditoria, erros, instalação e depuração, fornecendo detalhes cruciais sobre as ações realizadas, tentativas de autenticação, erros, instalações ou atualizações de aplicativos e informações para desenvolvedores.
+
+
+<img width="30%" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/961ec9fe-b47a-4ac2-bae7-0b0afb76a57b">
+
+
+- Dados: Aplicações são projetadas para criar, exibir, transmitir, receber ou modificar dados, além de proteger e armazenar dados em formatos de arquivos genéricos ou proprietários, em diversas localizações como bancos de dados e arquivos temporários ou permanentes.
+
+
+<img width="30%" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/1b96b1ee-db83-4c98-a629-272d4b856267">
+
+
+- Arquivos de Suporte: Enquanto oferecem menos informações críticas, podem fornecer pistas sobre o uso de uma aplicação e onde os arquivos de suporte são armazenados.
+
+
+<img width="30%" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/ef2986e8-3a66-423b-bd52-ffc3d899cac3">
+
+
+- Arquitetura da Aplicação: Explica como uma aplicação separa logicamente seus componentes, influenciando onde os dados da aplicação serão armazenados. As aplicações podem ser:
+        -  locais (mantendo dados no host)
+        -  cliente-servidor (com dados espalhados entre host local
+        -  servidor de aplicativos e servidor de banco de dados) ou baseadas na web (substituindo hosts locais por navegadores da web).
+
+
+<img width="30%" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/e79343b0-25f9-406d-8c51-b45a80838692">
+
+
+## Tipos de Aplicações
+
+Certos tipos deaplicações tendem a ser mais focadas em uma análise forense, como e-mail, uso de navegadores web e app de mensagens, compartilhamento de arquivos, dispositivos de segurança e ferramentas de ocultação de arquivos.
+
+
+<img width="50%" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/7f9e6544-9e4b-47e2-bf5f-2d144a1f012f">
+
+
+- E-mail: Uma fonte rica de dados tanto visíveis quanto ocultos, incluindo cabeçalhos, conteúdo da mensagem, informações do cliente de e-mail, servidores de e-mail envolvidos e filtros de spam ou antivírus.
+
+  
+- Uso da Web: Informações coletadas tanto do host (histórico do navegador, cookies) quanto dos servidores web (logs de solicitações).
+
+<img width="60%" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/60deda00-93fe-4878-9001-41f67ff36cba">
+
+  
+- Comunicações Interativas: Abrange chats em grupo, mensagens instantâneas e aplicações de áudio/vídeo, com configurações que podem conter listas de usuários, históricos de bate-papo e transferências de arquivos.
+
+
+<img width="40%" alt="image" src="https://github.com/cristiana-e/Pen-Testing-Incident-Response-Forensics/assets/19941757/f24bf1c7-6357-41a4-8a65-8ca48f4cc72a">
+
+
