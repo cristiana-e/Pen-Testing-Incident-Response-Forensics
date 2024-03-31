@@ -860,3 +860,32 @@ Embora identificar o atacante não seja a preocupação imediata durante a maior
 
 "Ao analisar ataques, identificar o atacante não é uma preocupação imediata: garantir que o ataque foi parado e recuperar o sistema e os dados são o principal interesse"- NIST 800-86
 
+# Coding for Cybersecurity
+
+
+[Guia](https://cybersecurityguide.org/resources/coding-for-cybersecurity/) para leitura.
+
+
+[Artigo do SANS](https://www.sans.org/reading-room/whitepapers/scripting/scripts-exploit-mitigate-risks-1313)) sobre como scripts são usados para mitigar ameaças e riscos.
+
+
+[Artigo](https://opensourceforu.com/2016/11/python-programming-digital-forensics-security-analysis/) sobre as diferentes técnicas de forense digital utilizando python.
+
+
+[Intrevista](https://www.magnetforensics.com/blog/being-forensically-curious-the-process-of-scripting/) com especialistas em cibersegurança sobre o uso de scripts.
+
+### Treinamento Python
+
+Python website:  https://www.python.org/
+
+Python Basics Beginners Guide:  https://wiki.python.org/moin/BeginnersGuide
+
+ 
+w3schools.com script training and exercises:  https://www.w3schools.com/python/default.asp
+
+ 
+Python for Data Sciences (Free Course):  https://cognitiveclass.ai/courses/python-for-data-science/
+
+ 
+Python for Data and AI (Coursera Course)  https://www.coursera.org/learn/python-for-applied-data-science-ai?specialization=ibm-data-science
+
